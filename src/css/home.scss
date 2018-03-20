@@ -1,0 +1,56 @@
+div.home-wrap {
+  color: blue;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .left,
+  .right {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 1s all;
+
+    svg {
+      max-width: 100%;
+    }
+
+    h1 {
+      transition: 3s all;
+      &:hover {
+        font-family: serif;
+        transition: 3s all;
+      }
+    }
+  }
+
+  .left {
+    // background-color: blue;
+  }
+
+  .coming-wrap,
+  .soon-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active {
+    background-color: #d8d8d8;
+    transition: 1s all;
+    svg {
+      fill: white;
+      transition: 1s all;
+    }
+  }
+}
