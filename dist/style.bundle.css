@@ -3,10 +3,12 @@ div.home-wrap {
   min-height: 100%;
   min-width: 100%;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   div.home-wrap a {
-    width: 50%;
-    height: 100vh; }
+    width: 100%;
+    height: 50vh; }
   div.home-wrap .left,
   div.home-wrap .right {
     display: -ms-inline-flexbox;
@@ -16,10 +18,13 @@ div.home-wrap {
     -ms-flex-align: center;
     align-items: center;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    transition: 1s all;
+    padding: 1em; }
     div.home-wrap .left svg,
     div.home-wrap .right svg {
-      max-width: 100%; }
+      max-width: 100%;
+      fill: #d8d8d8; }
     div.home-wrap .left h1,
     div.home-wrap .right h1 {
       transition: 3s all; }
@@ -34,13 +39,19 @@ div.home-wrap {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    justify-content: center; }
+  div.home-wrap .coming-wrap {
+    -ms-flex-align: end;
+    align-items: flex-end; }
+  div.home-wrap .soon-wrap {
+    -ms-flex-align: start;
+    align-items: flex-start; }
   div.home-wrap .active {
-    background-color: #979797; }
+    background-color: #d8d8d8;
+    transition: 1s all; }
     div.home-wrap .active svg {
-      fill: white; }
+      fill: white;
+      transition: 1s all; }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
