@@ -20,7 +20,8 @@ div.home-wrap {
     height: 100%;
     width: 100%;
     transition: 1s all;
-    padding: 1em; }
+    padding: 1em;
+    padding: 0; }
     div.home-wrap .left svg,
     div.home-wrap .right svg {
       max-width: 100%;

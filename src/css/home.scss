@@ -18,9 +18,12 @@ div.home-wrap {
     height: 100%;
     width: 100%;
     transition: 1s all;
+    padding: 1em;
+    padding: 0;
 
     svg {
       max-width: 100%;
+      fill: #d8d8d8;
     }
 
     h1 {
@@ -32,17 +35,19 @@ div.home-wrap {
     }
   }
 
-  .left {
-    // background-color: blue;
-  }
-
   .coming-wrap,
   .soon-wrap {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
+
+  .coming-wrap {
+    align-items: flex-end;
+  }
+  .soon-wrap {
+    align-items: flex-start;
   }
 
   .active {

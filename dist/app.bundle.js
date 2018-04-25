@@ -32134,7 +32134,8 @@ var App = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "router-ex" },
-        _react2.default.createElement(_reactRouterDom.Route, {
+        _react2.default.createElement(_reactRouterDom.BrowserRouter, {
+          basename: "yasmina",
           render: function render(_ref) {
             var location = _ref.location;
             return _react2.default.createElement(
@@ -32147,18 +32148,32 @@ var App = function (_Component) {
               _react2.default.createElement(
                 "div",
                 { key: location.pathname },
-                _react2.default.createElement(
-                  _reactRouterDom.Switch,
-                  { location: location },
-                  _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", render: function render(props) {
-                      return _react2.default.createElement(_Home2.default, null);
-                    } })
-                )
+                _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", render: function render(props) {
+                    return _react2.default.createElement(_Home2.default, null);
+                  } })
               )
             );
           }
         })
-      );
+      )
+
+      // <div className="router-ex">
+      //   <Router
+      //     basename={"/directory-name"}
+      //     render={({ location }) => (
+      //       <ReactCSSTransitionReplace
+      //         transitionName="fade"
+      //         transitionEnterTimeout={1000}
+      //         transitionLeaveTimeout={1000}
+      //       >
+      //         <div key={location.pathname}>
+      //           <Route exact path="/" render={props => <Home />} />
+      //         </div>
+      //       </ReactCSSTransitionReplace>
+      //     )}
+      //   />
+      // </div>
+      ;
     }
   }]);
 
@@ -33216,8 +33231,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var apiEndpoint = "https://patmartin.prismic.io/api/v2";
-
 var Home = function (_Component) {
   _inherits(Home, _Component);
 
@@ -33265,7 +33278,11 @@ var Home = function (_Component) {
         { className: "home-wrap" },
         _react2.default.createElement(
           "a",
-          { href: _YasminaKahnCV2.default, onMouseEnter: this.comingEnter, target: "_blank" },
+          {
+            href: "http://www.instagram.com/current_archive",
+            onMouseEnter: this.comingEnter,
+            target: "_blank"
+          },
           _react2.default.createElement(
             "div",
             { className: "left" },
@@ -33942,7 +33959,7 @@ exports.default = Soon;
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "668c8779325c3479456445d813bbc405.pdf";
+module.exports = __webpack_require__.p + "00f1aecd2b99daa5f38d66e17535908c.pdf";
 
 /***/ }),
 /* 99 */
