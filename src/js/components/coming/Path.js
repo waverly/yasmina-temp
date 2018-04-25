@@ -9,7 +9,6 @@ const apiEndpoint = "https://patmartin.prismic.io/api/v2";
 
 class Path extends Component {
   componentDidMount() {
-    console.log(this.props.id);
     let id = "#" + this.props.id;
     let s = Snap(id);
     let path = this.props.path;
@@ -27,7 +26,6 @@ class Path extends Component {
   }
 
   render() {
-    // console.log(this.path);
     return <path id={this.props.id} d={this.props.path} />;
   }
 }

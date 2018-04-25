@@ -8,6 +8,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin"); //  -> ADDED I
 // Constant with our paths
 const paths = {
   DIST: path.resolve(__dirname, "dist"),
+  STATIC: path.resolve(__dirname, "static"),
   SRC: path.resolve(__dirname, "src"),
   JS: path.resolve(__dirname, "src/js")
 };
@@ -44,6 +45,15 @@ module.exports = {
           fallback: "style-loader",
           use: ["css-loader", "sass-loader", "postcss-loader"]
         })
+      },
+      {
+        test: /\.(png|jpg|gif|pdf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {}
+          }
+        ]
       }
     ]
   },
@@ -57,6 +67,7 @@ module.exports = {
   resolve: {
     alias: {
       Src: path.resolve(__dirname, "src"),
+      Static: path.resolve(__dirname, "static"),
       Components: path.resolve(__dirname, "src/js/components"),
       Views: path.resolve(__dirname, "src/js/views"),
       Styles: path.resolve(__dirname, "src/css")

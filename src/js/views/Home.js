@@ -4,10 +4,9 @@ import ReactCSSTransitionReplace from "react-css-transition-replace";
 import "Styles/home.scss";
 import Coming from "Components/coming/Coming";
 import Soon from "Components/coming/Soon";
+import CV from "Static/YasminaKahnCV.pdf";
 
 import { Switch, Route } from "react-router-dom";
-
-const apiEndpoint = "https://patmartin.prismic.io/api/v2";
 
 class Home extends Component {
   constructor() {
@@ -21,7 +20,6 @@ class Home extends Component {
   }
 
   comingEnter() {
-    console.log("coming enter");
     this.setState(prevState => ({
       comingActive: !prevState.comingActive,
       soonActive: !prevState.soonActive
@@ -29,7 +27,6 @@ class Home extends Component {
   }
 
   soonEnter() {
-    console.log("soon enter");
     this.setState(prevState => ({
       soonActive: !prevState.soonActive,
       comingActive: !prevState.comingActive
@@ -40,7 +37,7 @@ class Home extends Component {
     return (
       <div className="home-wrap">
         <a
-          href="https://www.youtube.com/watch?v=L9Wnh0V4HMM"
+          href="http://www.instagram.com/current_archive"
           onMouseEnter={this.comingEnter}
           target="_blank"
         >
@@ -49,7 +46,7 @@ class Home extends Component {
           </div>
         </a>
         <a
-          href="https://www.youtube.com/watch?v=FFOzayDpWoI"
+          href="http://www.instagram.com/current_archive"
           onMouseEnter={this.soonEnter}
           target="_blank"
         >
